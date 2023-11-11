@@ -53,6 +53,11 @@
   <ItemGroup>
     <Compile Include="DatabaseContext.cs" />
     <Compile Include="DbInitializer.cs" />
+    <Compile Include="Migrations\202310051757315_InitialCreate.cs" />
+    <Compile Include="Migrations\202310051757315_InitialCreate.designer.cs">
+      <DependentUpon>202310051757315_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -64,6 +69,11 @@
       <Project>{EF883F2A-EE00-498E-BF01-46ECECC71A7D}</Project>
       <Name>ProductManagementApplication.Entities</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202310051757315_InitialCreate.resx">
+      <DependentUpon>202310051757315_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

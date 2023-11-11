@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ProductManagementApplication.Data
 {
-    internal class DbInitializer : CreateDatabaseIfNotExists<DatabaseContext> //if there is no database, check the databasecontext and create the db base on that.
+    internal class DbInitializer : DropCreateDatabaseIfModelChanges<DatabaseContext> //CreateDatabaseIfNotExists<DatabaseContext> //if there is no database, check the databasecontext and create the db base on that.
     {
         protected override void Seed(DatabaseContext context)
         {

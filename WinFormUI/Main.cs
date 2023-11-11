@@ -22,5 +22,23 @@ namespace WinFormUI
             CategoryManagement categoryManagement = new CategoryManagement();
             categoryManagement.ShowDialog();
         }
+
+        private void productManagementToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ProductManagement productManagement = new ProductManagement();
+            productManagement.ShowDialog();
+        }
+
+        private void userManagementToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UserManagement userManagement = new UserManagement();
+            userManagement.ShowDialog();
+        }
+
+        private void Main_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
     }
 }
